@@ -100,57 +100,62 @@
 :root[data-theme="light"] {
   color-scheme: light;
 
+  /* Backgrounds: Soft Blush / Light Lavender */
   --bg: #fcf8fa;
   --bg-1: #f6eff5;
   --bg-2: #eee3ed;
   --bg-3: #e4d5e2;
-  --surface: rgba(238, 211, 61, 0.07);
-  --surface-2: rgba(238, 211, 61, 0.10);
-  --surface-hover: rgba(238, 211, 61, 0.16);
+  --surface: rgba(244, 114, 182, 0.08);
+  --surface-2: rgba(56, 189, 248, 0.08);
+  --surface-hover: rgba(253, 224, 71, 0.15);
 
+  /* Inks */
   --ink: #1e1429;
   --ink-soft: #433454;
   --ink-muted: #7c6299;
   --ink-faint: #a792c0;
 
-  --line: rgba(238, 211, 61, 0.18);
-  --line-soft: rgba(238, 211, 61, 0.10);
-  --line-strong: rgba(238, 211, 61, 0.32);
+  /* Lines & Borders */
+  --line: rgba(219, 39, 119, 0.14);
+  --line-soft: rgba(14, 165, 233, 0.12);
+  --line-strong: rgba(219, 39, 119, 0.26);
 
-  /* Single accent — same yellow as dark mode */
-  --accent: #eed33d;
-  --accent-bright: #f5e060;
-  --accent-deep: #c8a800;
-  --accent-ink: #1a1000;
-  --accent-a05: rgba(238, 211, 61, 0.05);
-  --accent-a10: rgba(238, 211, 61, 0.10);
-  --accent-a20: rgba(238, 211, 61, 0.20);
-  --accent-a40: rgba(238, 211, 61, 0.40);
+  /* Accents */
+  --accent: #d4b248;
+  --accent-bright: #e2c055;
+  --accent-deep: #b8932c;
+  --accent-ink: #ffffff;
+  --accent-a05: rgba(212, 178, 72, 0.06);
+  --accent-a10: rgba(212, 178, 72, 0.12);
+  --accent-a20: rgba(212, 178, 72, 0.22);
+  --accent-a40: rgba(212, 178, 72, 0.42);
 
-  --accent2: #eed33d;
-  --accent2-a20: rgba(238, 211, 61, 0.20);
-  --accent2-a40: rgba(238, 211, 61, 0.40);
+  --accent2: #0ea5e9;
+  --accent2-a20: rgba(14, 165, 233, 0.20);
+  --accent2-a40: rgba(14, 165, 233, 0.38);
 
-  --accent3: #eed33d;
-  --accent3-a20: rgba(238, 211, 61, 0.20);
+  --accent3: #d97706;
+  --accent3-a20: rgba(217, 119, 6, 0.20);
+  --accent3-a40: rgba(217, 119, 6, 0.40);
 
-  --accent4: #eed33d;
-  --accent4-a20: rgba(238, 211, 61, 0.20);
+  --accent4: #8b5cf6;
+  --accent4-a20: rgba(139, 92, 246, 0.20);
 
+  /* Glassmorphism & Chrome */
   --nav-glass: rgba(252, 248, 250, 0.88);
   --menu-glass: rgba(254, 250, 252, 0.98);
   --card-glass: rgba(255, 255, 255, 0.82);
   --card-glass-hover: rgba(255, 255, 255, 0.96);
-  --spotlight-c: rgba(238, 211, 61, 0.12);
-  --sel-ink: #1a1000;
+  --spotlight-c: rgba(219, 39, 119, 0.08);
+  --sel-ink: #ffffff;
   --scroll-thumb: #d8c6d7;
   --scroll-thumb-h: #beacc0;
 
   --shadow-2: 0 10px 30px -4px rgba(90, 40, 80, 0.10);
   --shadow-3: 0 30px 70px -14px rgba(90, 40, 80, 0.16);
   --glow: 0 0 0 1px var(--accent-a20), 0 14px 44px -10px var(--accent-a40);
-  --glow-yellow: 0 0 0 1px var(--accent-a20), 0 14px 44px -10px var(--accent-a40);
-  --glow-blue: 0 0 0 1px var(--accent-a20), 0 14px 44px -10px var(--accent-a40);
+  --glow-yellow: 0 0 0 1px var(--accent3-a20), 0 0 24px -4px var(--accent3-a40);
+  --glow-blue: 0 0 0 1px var(--accent2-a20), 0 0 24px -4px var(--accent2-a40);
 }
 
 :root[data-theme="light"] .backdrop__grid {
