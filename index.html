@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohit Dakre | DevOps Engineer ⚡ City-Pop Workstation</title>
+  <meta name="description"
+    content="DevOps Engineer with 7+ years of experience in Kubernetes, CI/CD, cloud infrastructure, and GitOps. Based in Pune, India.">
+  <meta name="keywords"
+    content="Rohit Dakre, DevOps Engineer, Kubernetes, Docker, Terraform, ArgoCD, Jenkins, AWS, Azure, CI/CD, GitOps, Pune, India">
+  <meta name="author" content="Rohit Dakre">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0a0d18">
+
+  <!-- Theme boot — no flash of wrong theme -->
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) { }
+      if (t !== 'light' && t !== 'dark') t = 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rohit Dakre | DevOps Engineer">
+  <meta property="og:description"
+    content="DevOps Engineer with 7+ years of experience in cloud infrastructure, CI/CD, and GitOps.">
+  <meta property="og:url" content="https://rohitdakre.github.io">
+  <meta property="og:site_name" content="Rohit Dakre">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://rohitdakre.github.io/req/img/profile.png">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rohit Dakre | DevOps Engineer">
+  <meta name="twitter:description"
+    content="DevOps Engineer with 7+ years of experience in cloud infrastructure, CI/CD, and GitOps.">
+  <meta name="twitter:image" content="https://rohitdakre.github.io/req/img/profile.png">
+
+  <link rel="canonical" href="https://rohitdakre.github.io">
+  <link rel="me" href="https://github.com/rohitdakre">
+  <link rel="me" href="https://www.linkedin.com/in/rohit-dakre/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="req/img/fav/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts: Space Grotesk + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap">
+
+  <link rel="stylesheet" href="req/css/styles.css?v=retro2">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://rohitdakre.github.io/#website",
+        "url": "https://rohitdakre.github.io/",
+        "name": "Rohit Dakre",
+        "publisher": { "@id": "https://rohitdakre.github.io/#person" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://rohitdakre.github.io/#person",
+        "name": "Rohit Dakre",
+        "jobTitle": "DevOps Engineer",
+        "url": "https://rohitdakre.github.io",
+        "email": "mailto:rohitdakre347@gmail.com",
+        "image": "https://rohitdakre.github.io/req/img/profile.png",
+        "address": { "@type": "PostalAddress", "addressLocality": "Pune", "addressRegion": "Maharashtra", "addressCountry": "IN" },
+        "worksFor": { "@type": "Organization", "name": "Amdocs" },
+        "knowsAbout": ["Kubernetes", "Docker", "Terraform", "ArgoCD", "Jenkins", "AWS", "Azure", "CI/CD", "GitOps", "Linux"],
+        "sameAs": [
+          "https://github.com/rohitdakre",
+          "https://www.linkedin.com/in/rohit-dakre/"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body class="is-loading">
+
+  <!-- Skip to content -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Preloader — Retro Workstation / Retro PC Boot -->
+  <div class="preloader" id="preloader" role="status" aria-live="polite" aria-label="Loading">
+    <div class="preloader__glow"></div>
+    <div class="boot">
+      <div class="boot__titlebar">
+        <span class="boot__dot"></span>
+        <span class="boot__dot"></span>
+        <span class="boot__dot"></span>
+        <span class="boot__title">ROHIT-OS // DEVOPS WORKSTATION</span>
+      </div>
+      <div class="boot__body">
+        <div class="boot__prompt-line">
+          <span class="pu">rohit</span>
+          <span class="ps">@</span>
+          <span class="ph">steam-deck</span>
+          <span class="ps">:~$&nbsp;</span>
+          <span id="bootCmd"></span>
+          <span class="caret" id="bootCaret"></span>
+        </div>
+        <div class="boot__lines" id="bootLines"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Running Pikachu Cursor -->
+  <div class="cursor" id="cursor" aria-hidden="true">
+    <img class="cursor__img" id="cursorImg" src="req/img/gif/pickachu_run1.gif" alt="" aria-hidden="true">
+    <span class="cursor__label"></span>
+  </div>
+
+  <!-- Ambient Retro Synth City Backdrop -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="backdrop__grid"></div>
+    <div class="backdrop__glow"></div>
+    <div class="backdrop__glow2"></div>
+    <div class="backdrop__grain"></div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+
+        <a class="nav__logo" href="#hero" aria-label="Rohit Dakre — home">
+          <span class="nav__logo-mark" aria-hidden="true">RD</span>
+          <span class="nav__logo-text">Rohit Dakre</span>
+        </a>
+
+        <ul class="nav__links" role="list">
+          <li><a class="nav__link" href="#hero">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#work">Work</a></li>
+          <li><a class="nav__link" href="#stack">Stack</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#credentials">Credentials</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav__actions">
+          <button class="theme-btn" id="themeToggle" aria-label="Switch to light theme" type="button">
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z" />
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path
+                d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+            </svg>
+          </button>
+
+          <a class="btn btn--primary btn--lg nav__cta magnetic" href="#contact" id="navCta" data-cursor="★ SAY HI">
+            Let's talk
+            <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+
+          <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"
+            aria-controls="navMenu" type="button">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+
+        <ul class="nav__menu" id="navMenu" role="list">
+          <li><a class="nav__link" href="#hero">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#work">Work</a></li>
+          <li><a class="nav__link" href="#stack">Stack</a></li>
+          <li><a class="nav__link" href="#projects">Projects</a></li>
+          <li><a class="nav__link" href="#credentials">Credentials</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav__progress" aria-hidden="true"></div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main id="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="section" aria-label="Introduction">
+      <div class="container">
+        <div class="hero__inner">
+
+          <div class="hero__text">
+            <div class="hero__eyebrow">
+              <span class="hero__status" aria-hidden="true"></span>
+              Open to new opportunities · Pune, India
+            </div>
+
+            <h1 class="hero__name">
+              <span class="first">Rohit</span><br>
+              <span class="last" data-decode="Dakre">Dakre</span>
+            </h1>
+
+            <p class="hero__title">DevOps Engineer &amp; Cloud Infrastructure Specialist</p>
+
+            <p class="hero__tagline">
+              I turn <strong>complex cloud infrastructure into calm, automated systems</strong> —
+              so your team ships with confidence and sleeps through deployments.
+            </p>
+
+            <div class="hero__ctas">
+              <a class="btn btn--primary btn--lg magnetic" href="#contact" id="heroCtaContact" data-cursor="★ CONNECT">
+                Let's connect
+                <svg class="btn__ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a class="btn btn--ghost btn--lg magnetic" href="#projects" id="heroCtaWork" data-cursor="★ PROJECTS">
+                View projects
+              </a>
+            </div>
+
+            <div class="hero__scroll" aria-hidden="true">
+              <span class="hero__scroll-line"></span>
+              scroll
+            </div>
+          </div>
+
+          <!-- Polaroid / Sticker Hero Card -->
+          <div class="idcard" role="img" aria-label="Profile photo of Rohit Dakre">
+            <div class="idcard__inner">
+              <div class="idcard__photo">
+                <img src="req/img/profile.jpg" alt="Rohit Dakre" width="270" height="270" loading="eager">
+              </div>
+              <div class="idcard__body">
+                <p class="idcard__name">Rohit Dakre</p>
+                <p class="idcard__role">DevOps Engineer · 7+ yrs</p>
+                <div class="idcard__tags">
+                  <span class="tag">Kubernetes</span>
+                  <span class="tag tag--2">GitOps</span>
+                  <span class="tag tag--3">Cloud</span>
+                  <span class="tag">CKA</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="idx">01</span>&nbsp;About</div>
+          <h2 id="about-heading">Engineer by craft,<br>explorer by instinct.</h2>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="lead reveal">
+              DevOps Engineer with 7+ years of experience, always fascinated by the cool tech surrounding us.
+              I'm deeply interested in understanding how things work — from kernel internals to cloud-native
+              architectures — and then automating everything in between.
+            </p>
+            <p class="lead reveal reveal--delay-1">
+              At Amdocs, I've led infrastructure migrations, built production-grade CI/CD pipelines, and
+              championed GitOps practices across teams. I believe great operations are invisible: systems
+              that just run, deployments nobody fears, and on-call rotations nobody dreads.
+            </p>
+          </div>
+
+          <div class="about__principles">
+            <div class="principle reveal reveal--delay-1">
+              <div class="principle__icon">⚙️</div>
+              <h3 class="principle__title">Automate the toil</h3>
+              <p class="principle__desc">Manual steps are reliability debt. If it runs more than once, it gets a
+                pipeline.</p>
+            </div>
+            <div class="principle reveal reveal--delay-2">
+              <div class="principle__icon">🔍</div>
+              <h3 class="principle__title">Observe everything</h3>
+              <p class="principle__desc">You can't fix what you can't see. Metrics, logs, and traces are non-negotiable.
+              </p>
+            </div>
+            <div class="principle reveal reveal--delay-3">
+              <div class="principle__icon">🚀</div>
+              <h3 class="principle__title">Ship with confidence</h3>
+              <p class="principle__desc">Small, frequent, reversible deployments. Deploy day should feel like any other
+                day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="work" class="section" aria-labelledby="work-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="idx">02</span>&nbsp;Experience</div>
+          <h2 id="work-heading">Where I've<br>made an impact.</h2>
+        </div>
+
+        <div class="work__grid">
+
+          <article class="crow reveal">
+            <div class="crow__header">
+              <h3 class="crow__company">Amdocs</h3>
+              <span class="crow__date">2019 → Present</span>
+            </div>
+            <p class="crow__role">DevOps Engineer</p>
+            <p class="crow__desc">
+              Designing and operating cloud-native infrastructure for enterprise telecom clients. Led the
+              adoption of Kubernetes and ArgoCD-based GitOps across multiple product teams, cutting
+              deployment lead time from days to minutes. Built reusable Terraform modules for AWS and Azure
+              that standardised provisioning across 10+ projects. Established monitoring and alerting stacks
+              that reduced MTTR by 60%.
+            </p>
+            <div class="crow__tags">
+              <span class="tag">Kubernetes</span>
+              <span class="tag tag--2">ArgoCD</span>
+              <span class="tag tag--3">Terraform</span>
+              <span class="tag">Jenkins</span>
+              <span class="tag tag--2">AWS</span>
+              <span class="tag tag--3">Azure</span>
+              <span class="tag">Docker</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="section" aria-labelledby="stack-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="idx">03</span>&nbsp;Stack</div>
+          <h2 id="stack-heading">The toolchain,<br>declared.</h2>
+          <p class="lead reveal">Built over 7 years of solving infrastructure, reliability, and automation challenges.
+          </p>
+        </div>
+
+        <!-- Retro YAML spec block -->
+        <div class="spec reveal">
+          <div class="spec__bar">
+            <span class="spec__dot"></span>
+            <span class="spec__dot"></span>
+            <span class="spec__dot"></span>
+            <span class="spec__fname">rohit.stack.yml</span>
+          </div>
+          <div class="spec__body">
+            <span class="ln"> 1</span><span class="k">stack</span><span>:</span><br>
+            <span class="ln"> 2</span>&nbsp;&nbsp;<span class="k">orchestration</span><span>:</span> <span
+              class="v">[kubernetes, docker, helm, containerd]</span><br>
+            <span class="ln"> 3</span>&nbsp;&nbsp;<span class="k">gitops</span><span>:</span> <span class="v">[argocd,
+              github-actions]</span><br>
+            <span class="ln"> 4</span>&nbsp;&nbsp;<span class="k">ci_cd</span><span>:</span> <span class="v">[jenkins,
+              github-actions]</span><br>
+            <span class="ln"> 5</span>&nbsp;&nbsp;<span class="k">iac</span><span>:</span> <span class="v">[terraform,
+              ansible, helm-charts]</span><br>
+            <span class="ln"> 6</span>&nbsp;&nbsp;<span class="k">cloud</span><span>:</span> <span class="v">[aws,
+              azure]</span><br>
+            <span class="ln"> 7</span>&nbsp;&nbsp;<span class="k">os</span><span>:</span> <span class="v">[linux,
+              ubuntu, rhel]</span><br>
+            <span class="ln"> 8</span>&nbsp;&nbsp;<span class="k">scm</span><span>:</span> <span class="v">[git, github,
+              bitbucket]</span><br>
+            <span class="ln"> 9</span>&nbsp;&nbsp;<span class="k">monitoring</span><span>:</span> <span
+              class="v">[prometheus, grafana, elk-stack]</span><br>
+            <span class="ln">10</span><br>
+            <span class="ln">11</span><span class="c"># philosophy</span><br>
+            <span class="ln">12</span><span class="k">mode</span><span>:</span> <span class="n">automate_the_toil</span>
+            <span class="c"># observe · automate · ship</span><br>
+          </div>
+        </div>
+
+        <!-- City-Pop Kanban Board -->
+        <div class="kanban reveal" aria-label="Technology stack by category">
+
+          <div class="kanban-col">
+            <div class="kanban-col__header">
+              <span class="kanban-col__title">Orchestration</span>
+              <span class="kanban-col__count">4</span>
+            </div>
+            <div class="kanban-card">Kubernetes</div>
+            <div class="kanban-card">Docker</div>
+            <div class="kanban-card">Helm</div>
+            <div class="kanban-card">Containerd</div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="kanban-col__header">
+              <span class="kanban-col__title">GitOps / CI-CD</span>
+              <span class="kanban-col__count">5</span>
+            </div>
+            <div class="kanban-card">ArgoCD</div>
+            <div class="kanban-card">Flux</div>
+            <div class="kanban-card">Jenkins</div>
+            <div class="kanban-card">GitHub Actions</div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="kanban-col__header">
+              <span class="kanban-col__title">IaC</span>
+              <span class="kanban-col__count">3</span>
+            </div>
+            <div class="kanban-card">Terraform</div>
+            <div class="kanban-card">Ansible</div>
+            <div class="kanban-card">Helm Charts</div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="kanban-col__header">
+              <span class="kanban-col__title">Cloud</span>
+              <span class="kanban-col__count">4</span>
+            </div>
+            <div class="kanban-card">AWS</div>
+            <div class="kanban-card">Azure</div>
+            <div class="kanban-card">EKS</div>
+            <div class="kanban-card">AKS</div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="kanban-col__header">
+              <span class="kanban-col__title">Monitoring</span>
+              <span class="kanban-col__count">3</span>
+            </div>
+            <div class="kanban-card">Prometheus</div>
+            <div class="kanban-card">Grafana</div>
+            <div class="kanban-card">ELK Stack</div>
+          </div>
+
+          <div class="kanban-col">
+            <div class="kanban-col__header">
+              <span class="kanban-col__title">OS / Scripting</span>
+              <span class="kanban-col__count">4</span>
+            </div>
+            <div class="kanban-card">Linux</div>
+            <div class="kanban-card">Bash</div>
+            <div class="kanban-card">Python</div>
+            <div class="kanban-card">Git</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section" aria-labelledby="proj-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="idx">04</span>&nbsp;Projects</div>
+          <h2 id="proj-heading">Things I've<br>built and shipped.</h2>
+        </div>
+
+        <div class="proj-grid">
+
+          <article class="proj-card reveal" aria-label="Project: AWS Deployment Template">
+            <div class="proj-card__top" aria-hidden="true">☁️</div>
+            <div class="proj-card__body">
+              <h3 class="proj-card__title">AWS Deployment Template</h3>
+              <p class="proj-card__desc">
+                A GitHub-based template to quickly deploy applications to AWS using Terraform and manage
+                them with GitOps principles. Includes reusable modules for VPC, EKS, ALB, RDS, and
+                ArgoCD integration — from zero to production in minutes.
+              </p>
+              <div class="proj-card__footer">
+                <div class="crow__tags">
+                  <span class="tag">Terraform</span>
+                  <span class="tag tag--2">ArgoCD</span>
+                  <span class="tag tag--3">AWS EKS</span>
+                </div>
+                <a class="proj-card__link" href="https://github.com/rohitdakre" target="_blank"
+                  rel="noopener noreferrer" data-cursor="★ REPO">
+                  View on GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="11" aria-hidden="true">
+                    <path d="M7 7h10v10M7 17 17 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj-card reveal reveal--delay-1" aria-label="Project: Uniconnect Cloud Migration">
+            <div class="proj-card__top" aria-hidden="true">🔄</div>
+            <div class="proj-card__body">
+              <h3 class="proj-card__title">Uniconnect Migration</h3>
+              <p class="proj-card__desc">
+                Migrated a production website from on-premises servers to AWS, leveraging containerisation
+                with Docker, Application Load Balancer (ALB), and Route 53 for DNS. Achieved zero-downtime
+                cutover and a 40% reduction in infrastructure costs.
+              </p>
+              <div class="proj-card__footer">
+                <div class="crow__tags">
+                  <span class="tag">Docker</span>
+                  <span class="tag tag--2">AWS ALB</span>
+                  <span class="tag tag--3">Route 53</span>
+                </div>
+                <a class="proj-card__link" href="https://github.com/rohitdakre" target="_blank"
+                  rel="noopener noreferrer" data-cursor="★ REPO">
+                  View on GitHub
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" width="11" aria-hidden="true">
+                    <path d="M7 7h10v10M7 17 17 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Credentials Section -->
+    <section id="credentials" class="section" aria-labelledby="creds-heading">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow"><span class="idx">05</span>&nbsp;Credentials</div>
+          <h2 id="creds-heading">Proof,<br>not promises.</h2>
+        </div>
+
+        <div class="creds-grid">
+
+          <a class="cred-card reveal"
+            href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/ce34f023-288c-4076-9672-2b759266a211-rohit-dakre-aa2d1354-3e9a-4f17-b479-ae389705285b-certificate.pdf"
+            target="_blank" rel="noopener noreferrer" aria-label="Verify CKA certificate" data-cursor="verify">
+            <div class="cred-card__badge">☸️</div>
+            <span class="cred-card__issuer">CNCF / Linux Foundation</span>
+            <h3 class="cred-card__name">Certified Kubernetes Administrator (CKA)</h3>
+            <p class="cred-card__date">Issued · Active</p>
+            <span class="cred-card__verify">Verify ↗</span>
+          </a>
+
+          <a class="cred-card reveal reveal--delay-1"
+            href="https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/ce34f023-288c-4076-9672-2b759266a211-rohit-dakre-46329e0c-9970-48c2-a6d0-4f5cdc0c00c0-certificate.pdf"
+            target="_blank" rel="noopener noreferrer" aria-label="Verify CKAD certificate" data-cursor="verify">
+            <div class="cred-card__badge">🐳</div>
+            <span class="cred-card__issuer">CNCF / Linux Foundation</span>
+            <h3 class="cred-card__name">Certified Kubernetes Application Developer (CKAD)</h3>
+            <p class="cred-card__date">Issued · Active</p>
+            <span class="cred-card__verify">Verify ↗</span>
+          </a>
+
+          <a class="cred-card reveal reveal--delay-2"
+            href="https://learn.microsoft.com/en-us/users/rohitdakre-1240/credentials/ccc336070382ade" target="_blank"
+            rel="noopener noreferrer" aria-label="Verify AI-102 certificate" data-cursor="verify">
+            <div class="cred-card__badge">🤖</div>
+            <span class="cred-card__issuer">Microsoft</span>
+            <h3 class="cred-card__name">Azure AI Engineer Associate (AI-102)</h3>
+            <p class="cred-card__date">Issued · Active</p>
+            <span class="cred-card__verify">Verify ↗</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact__inner">
+
+          <div class="section-head reveal" style="margin-inline:auto;">
+            <div class="eyebrow"><span class="idx">06</span>&nbsp;Contact</div>
+            <h2 id="contact-heading">Let's build<br>something great.</h2>
+          </div>
+
+          <p class="contact__tagline reveal">
+            One conversation about your infrastructure challenges, cloud strategy, or automation opportunities.
+          </p>
+
+          <div class="contact__links reveal reveal--delay-1">
+            <a class="btn btn--primary btn--lg magnetic" href="mailto:rohitdakre347@gmail.com" id="contactEmail"
+              data-cursor="★ EMAIL">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" width="16" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+              </svg>
+              Email me
+            </a>
+            <a class="btn btn--ghost btn--lg magnetic" href="https://www.linkedin.com/in/rohit-dakre/" target="_blank"
+              rel="noopener noreferrer" id="contactLinkedIn" data-cursor="★ LINKEDIN">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" aria-hidden="true">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+              LinkedIn
+            </a>
+            <a class="btn btn--ghost btn--lg magnetic" href="https://github.com/rohitdakre" target="_blank"
+              rel="noopener noreferrer" id="contactGitHub" data-cursor="★ GITHUB">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" aria-hidden="true">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              GitHub
+            </a>
+          </div>
+
+          <a class="contact__geo reveal reveal--delay-2" href="https://www.google.com/maps?q=Pune,Maharashtra,India"
+            target="_blank" rel="noopener noreferrer" aria-label="Location: Pune, India">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="12" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Pune, India · IST <span data-clock aria-label="Current time in IST"></span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+
+        <a class="footer__logo" href="#hero" aria-label="Rohit Dakre — back to top">
+          <span class="nav__logo-mark" aria-hidden="true" style="width:28px;height:28px;font-size:0.65rem;">RD</span>
+          Rohit Dakre
+        </a>
+
+        <div class="footer__socials" role="list" aria-label="Social links">
+          <a class="footer__social" href="https://github.com/rohitdakre" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub" role="listitem">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+          </a>
+          <a class="footer__social" href="https://www.linkedin.com/in/rohit-dakre/" target="_blank"
+            rel="noopener noreferrer" aria-label="LinkedIn" role="listitem">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+          <a class="footer__social" href="mailto:rohitdakre347@gmail.com" aria-label="Email" role="listitem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </a>
+        </div>
+
+        <p class="footer__copy">© <span id="year"></span> Rohit Dakre · 90s City-Pop DevOps Deck ⚡</p>
+
+        <a class="footer__back" href="#hero" aria-label="Back to top">Back to top ↑</a>
+
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+  <script src="req/js/main.js?v=retro2" defer></script>
+
+</body>
+
+</html>
