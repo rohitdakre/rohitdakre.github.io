@@ -19,7 +19,7 @@
     { text: '✓ Kubernetes Control Plane connected [OK]', ok: true },
     { text: '› Syncing GitOps State with ArgoCD...', ok: false },
     { text: '✓ 0 Drift detected · Terraform modules locked', ok: true },
-    { text: '★ City-Pop Audio Matrix: 120 BPM active', ok: true },
+    { text: '★ Audio Matrix: 120 BPM active', ok: true },
     { text: '✓ Welcome to Rohit Dakre\'s DevOps Deck! 🚀', ok: true },
   ];
 
